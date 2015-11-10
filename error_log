@@ -1,0 +1,26 @@
+[03-Nov-2015 20:31:39 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/artisticagallery/public_html/index.php on line 135
+[03-Nov-2015 20:32:29 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/artisticagallery/public_html/index.php on line 135
+[03-Nov-2015 20:32:50 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/artisticagallery/public_html/index.php on line 135
+[03-Nov-2015 20:36:11 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/artisticagallery/public_html/index.php on line 135
+[03-Nov-2015 20:36:16 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/artisticagallery/public_html/index.php on line 135
+[03-Nov-2015 20:45:38 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/artisticagallery/public_html/index.php on line 135
+[03-Nov-2015 20:45:47 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/artisticagallery/public_html/index.php on line 135
+[03-Nov-2015 20:46:59 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/artisticagallery/public_html/index.php on line 135
+[03-Nov-2015 20:47:04 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/artisticagallery/public_html/index.php on line 135
+[03-Nov-2015 20:48:04 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/artisticagallery/public_html/index.php on line 135
+[03-Nov-2015 20:48:26 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/artisticagallery/public_html/index.php on line 135
+[03-Nov-2015 20:48:33 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/artisticagallery/public_html/index.php on line 135
+[03-Nov-2015 20:52:22 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/artisticagallery/public_html/index.php on line 135
+[03-Nov-2015 20:54:43 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/artisticagallery/public_html/index.php on line 135
+[03-Nov-2015 20:59:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/artisticagallery/public_html/index.php:135) in /home/artisticagallery/public_html/wp-content/plugins/wpclef/includes/lib/wp-session/class-wp-session.php on line 124
+[03-Nov-2015 20:59:54 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/artisticagallery/public_html/index.php:135) in /home/artisticagallery/public_html/wp-content/plugins/wpclef/includes/lib/wp-session/class-wp-session.php on line 124
+[03-Nov-2015 21:15:35 UTC] PHP Fatal error:  Cannot redeclare add_filter() (previously declared in /home/artisticagallery/public_html/plugin.php:81) in /home/artisticagallery/public_html/wp-includes/plugin.php on line 88
+[03-Nov-2015 21:16:38 UTC] PHP Fatal error:  Cannot redeclare add_filter() (previously declared in /home/artisticagallery/public_html/plugin.php:81) in /home/artisticagallery/public_html/wp-includes/plugin.php on line 88
+[03-Nov-2015 21:24:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/artisticagallery/public_html/index.php:135) in /home/artisticagallery/public_html/wp-content/plugins/wpclef/includes/lib/wp-session/class-wp-session.php on line 124
+[03-Nov-2015 21:28:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/artisticagallery/public_html/index.php:135) in /home/artisticagallery/public_html/wp-content/plugins/wpclef/includes/lib/wp-session/class-wp-session.php on line 124
+[03-Nov-2015 21:29:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/artisticagallery/public_html/index.php:135) in /home/artisticagallery/public_html/wp-content/plugins/wpclef/includes/lib/wp-session/class-wp-session.php on line 124
+[03-Nov-2015 21:32:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/artisticagallery/public_html/index.php:135) in /home/artisticagallery/public_html/wp-content/plugins/wpclef/includes/lib/wp-session/class-wp-session.php on line 124
+[03-Nov-2015 21:36:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/artisticagallery/public_html/index.php:135) in /home/artisticagallery/public_html/wp-content/plugins/wpclef/includes/lib/wp-session/class-wp-session.php on line 124
+[03-Nov-2015 21:40:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/artisticagallery/public_html/index.php:135) in /home/artisticagallery/public_html/wp-content/plugins/wpclef/includes/lib/wp-session/class-wp-session.php on line 124
+[03-Nov-2015 21:40:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/artisticagallery/public_html/index.php:135) in /home/artisticagallery/public_html/wp-includes/load.php on line 134
+[03-Nov-2015 21:40:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/artisticagallery/public_html/index.php:135) in /home/artisticagallery/public_html/wp-includes/load.php on line 135
