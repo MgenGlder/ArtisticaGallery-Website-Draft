@@ -7,10 +7,10 @@
 
   //From email address and name
   $mail->From = "from@yourdomain.com";
-  $mail->FromName = "name";
+  $mail->FromName = "Full Name";
 
   //To address and name
-  $mail->addAddress($_POST["email"], $_POST["name"]);
+  $mail->addAddress($_POST["emailAddress"], $_POST["fullName"]); //Pam's email
 
   //Address to which recipient will reply
   $mail->addReplyTo("reply@yourdomain.com", "Reply"); //Pam's email
@@ -22,9 +22,8 @@
   //Send HTML or Plain Text email
   $mail->isHTML(true);
 
-  $mail->Subject = "Hi " . $_POST["name"];
-  $mail->Body = $_POST["message"];
-
+  $mail->Subject = "Hi " . $_POST["fullName"];
+  $mail->Body = "<i>Mail body in HTML</i>";
   $mail->AltBody = "This is the plain text version of the email content";
 
   if(!$mail->send())
@@ -34,10 +33,10 @@
   else
   {
       echo "You did it!!!!";
-      echo "Message has been sent successfully ";
-      echo "Name: " . $_POST["name"] . " ";
-      echo "Email address: " . $_POST["email"] . " ";
-      echo "Message: " . $_POST["message"]. " ";
+      echo "Message has been sent successfully";
+      echo $_POST["fullName"];
+      echo $_POST["emailAddress"];
+      echo $_POST["phoneNumber"];
   }
 
 
