@@ -10,10 +10,10 @@
   $mail->FromName = "Full Name";
 
   //To address and name
-  $mail->addAddress($_POST["emailAddress"], $_POST["fullName"]);
+  $mail->addAddress($_POST["emailAddress"], $_POST["fullName"]); //Pam's email
 
   //Address to which recipient will reply
-  $mail->addReplyTo("reply@yourdomain.com", "Reply");
+  $mail->addReplyTo("reply@yourdomain.com", "Reply"); //Pam's email
 
   //CC and BCC
   $mail->addCC("cc@example.com");
