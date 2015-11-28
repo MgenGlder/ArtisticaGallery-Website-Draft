@@ -25,6 +25,16 @@
   $mail->Subject = "Hi " . $_POST["fullName"];
   $mail->Body = "<i>Mail body in HTML</i>";
   $mail->AltBody = "This is the plain text version of the email content";
+  
+  //add attachment from the form (the art picture);
+  if (isset($_FILES['picture']) &&
+  $_FILES['picture']['error'] == UPLOAD_ERR_OK) {
+    $mail->AddAttachment($_FILES['picture']['tmp_name'],
+                          $_FILES['picture']['name']);
+  }
+  else {
+    echo "There was an error with the picture upload";
+  }
 
   if(!$mail->send())
   {
