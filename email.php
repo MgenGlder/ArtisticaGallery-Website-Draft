@@ -7,7 +7,7 @@
 
   //From email address and name
   $mail->From = "from@yourdomain.com";
-  $mail->FromName = "Full Name";
+  $mail->FromName = $_POST["name"];
 
   //To address and name
   $mail->addAddress($_POST["emailAddress"], $_POST["fullName"]); //Pam's email
@@ -22,10 +22,10 @@
   //Send HTML or Plain Text email
   $mail->isHTML(true);
 
-  $mail->Subject = "Hi " . $_POST["fullName"];
-  $mail->Body = "<i>Mail body in HTML</i>";
+  $mail->Subject = $_POST["subject"];
+  $mail->Body = $_POST["message"];
   $mail->AltBody = "This is the plain text version of the email content";
-  
+
   //add attachment from the form (the art picture);
   if (isset($_FILES['picture']) &&
   $_FILES['picture']['error'] == UPLOAD_ERR_OK) {
@@ -48,6 +48,5 @@
       echo $_POST["emailAddress"];
       echo $_POST["phoneNumber"];
   }
-
 
 ?>
