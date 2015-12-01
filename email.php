@@ -48,6 +48,4 @@
       echo $_POST["emailAddress"];
       echo $_POST["phoneNumber"];
   }
-
-
 ?>
