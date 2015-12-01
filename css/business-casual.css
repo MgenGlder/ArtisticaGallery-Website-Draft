@@ -113,6 +113,15 @@ footer p {
 }
 
 @media screen and (min-width:768px) {
+
+    .logo{
+      align:left;
+      max-width: 100%;
+      width:150px;
+      height:150px;
+
+    }
+
     .brand {
         display: inherit;
         margin: 0;
@@ -134,6 +143,7 @@ footer p {
         float: left;
         margin-right: 25px;
     }
+
 
     .address-bar {
         display: inherit;
