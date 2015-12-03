@@ -129,7 +129,7 @@
                     </h2>
                     <hr>
                     <p>Give us your art!</p>
-                    <form role="form" action="email.php" method="post" enctype="multipart/form-data">
+                    <form id="artForm" role="form" action="email.php" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="form-group col-lg-4">
                                 <label>Subject</label>
@@ -188,6 +188,25 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $("#artForm").on("submit", function (e){
+            e.preventDefault();
+            console.log("submitting the post request to the server");
+            var $fd = $(this).serialize();
+            console.log($fd);
+              $.ajax({
+                url: "email.php",
+                type: "POST",
+                data: $fd,
+                enctype: 'multipart/form-data',
+                processData: false,  // tell jQuery not to process the data
+                contentType: false   // tell jQuery not to set contentType
+              }).done(function(data) {
+                console.log("exiting post process...");
+                console.log(data);
+            });
+        });
+    </script>
 
 </body>
 
