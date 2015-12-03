@@ -26,11 +26,43 @@
   $mail->Body = $_POST["message"];
   $mail->AltBody = "This is the plain text version of the email content";
 
-  //add attachment from the form (the art picture);
+  //add attachment from the form (the art picture)
   if (isset($_FILES['picture']) &&
   $_FILES['picture']['error'] == UPLOAD_ERR_OK) {
     $mail->AddAttachment($_FILES['picture']['tmp_name'],
                           $_FILES['picture']['name']);
+  }
+  else {
+    echo "There was an error with the picture upload";
+  }
+  if (isset($_FILES['picture1']) &&
+  $_FILES['picture1']['error'] == UPLOAD_ERR_OK) {
+    $mail->AddAttachment($_FILES['picture1']['tmp_name'],
+                          $_FILES['picture1']['name']);
+  }
+  else {
+    echo "There was an error with the picture upload";
+  }
+  if (isset($_FILES['picture2']) &&
+  $_FILES['picture2']['error'] == UPLOAD_ERR_OK) {
+    $mail->AddAttachment($_FILES['picture2']['tmp_name'],
+                          $_FILES['picture2']['name']);
+  }
+  else {
+    echo "There was an error with the picture upload";
+  }
+  if (isset($_FILES['picture3']) &&
+  $_FILES['picture3']['error'] == UPLOAD_ERR_OK) {
+    $mail->AddAttachment($_FILES['picture3']['tmp_name'],
+                          $_FILES['picture3']['name']);
+  }
+  else {
+    echo "There was an error with the picture upload";
+  }
+  if (isset($_FILES['picture4']) &&
+  $_FILES['picture4']['error'] == UPLOAD_ERR_OK) {
+    $mail->AddAttachment($_FILES['picture4']['tmp_name'],
+                          $_FILES['picture4']['name']);
   }
   else {
     echo "There was an error with the picture upload";
@@ -42,14 +74,10 @@
   }
   else
   {
-      echo "You did it!!!!";
       echo "Message has been sent successfully";
-      echo $_POST["fullName"];
-      echo $_POST["emailAddress"];
-      echo $_POST["phoneNumber"];
+      //echo $_POST["fullName"];
+      //echo $_POST["emailAddress"];
+      //echo $_POST["phoneNumber"];
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 ?>
