@@ -22,7 +22,7 @@
   //Send HTML or Plain Text email
   $mail->isHTML(true);
 
-  $mail->Subject = $_POST["subject"];
+  $mail->Subject = "Art Request";
   $mail->Body = $_POST["message"];
   $mail->AltBody = "This is the plain text version of the email content";
 
