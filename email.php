@@ -48,5 +48,8 @@
       echo $_POST["emailAddress"];
       echo $_POST["phoneNumber"];
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 ?>
