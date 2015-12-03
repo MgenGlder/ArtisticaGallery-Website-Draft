@@ -23,58 +23,51 @@
   $mail->isHTML(true);
 
   $mail->Subject = "Art Request";
-  $mail->Body = $_POST["message"];
+  $mail->Body = "message";
   $mail->AltBody = "This is the plain text version of the email content";
+  $numAttachments = 0;
 
   //add attachment from the form (the art picture)
   if (isset($_FILES['picture']) &&
   $_FILES['picture']['error'] == UPLOAD_ERR_OK) {
     $mail->AddAttachment($_FILES['picture']['tmp_name'],
                           $_FILES['picture']['name']);
-  }
-  else {
-    echo "There was an error with the picture upload";
+  $numAttachments = $numAttachments + 1;
   }
   if (isset($_FILES['picture1']) &&
   $_FILES['picture1']['error'] == UPLOAD_ERR_OK) {
     $mail->AddAttachment($_FILES['picture1']['tmp_name'],
                           $_FILES['picture1']['name']);
-  }
-  else {
-    echo "There was an error with the picture upload";
+  $numAttachments = $numAttachments + 1;
   }
   if (isset($_FILES['picture2']) &&
   $_FILES['picture2']['error'] == UPLOAD_ERR_OK) {
     $mail->AddAttachment($_FILES['picture2']['tmp_name'],
                           $_FILES['picture2']['name']);
-  }
-  else {
-    echo "There was an error with the picture upload";
+  $numAttachments = $numAttachments + 1;
   }
   if (isset($_FILES['picture3']) &&
   $_FILES['picture3']['error'] == UPLOAD_ERR_OK) {
     $mail->AddAttachment($_FILES['picture3']['tmp_name'],
                           $_FILES['picture3']['name']);
-  }
-  else {
-    echo "There was an error with the picture upload";
+  $numAttachments = $numAttachments + 1;
   }
   if (isset($_FILES['picture4']) &&
   $_FILES['picture4']['error'] == UPLOAD_ERR_OK) {
     $mail->AddAttachment($_FILES['picture4']['tmp_name'],
                           $_FILES['picture4']['name']);
+  $numAttachments = $numAttachments + 1;
   }
-  else {
-    echo "There was an error with the picture upload";
-  }
-
   if(!$mail->send())
   {
-      echo "Mailer Error: " . $mail->ErrorInfo;
+      $array = array("error", $mail->ErrorInfo);
+      echo json_encode($array);
+      //echo "Mailer Error: " . $mail->ErrorInfo;
   }
   else
   {
-      echo "Message has been sent successfully";
+      $array = array("success", $numAttachments);
+      echo json_encode($array);
       //echo $_POST["fullName"];
       //echo $_POST["emailAddress"];
       //echo $_POST["phoneNumber"];

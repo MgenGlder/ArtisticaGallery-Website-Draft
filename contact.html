@@ -157,10 +157,10 @@
                                 <input type="file" name="picture4" id="picture" accept="image/*" />
                               </br>
                                 <label>Artistica has a newsletter!</label></br>
-                                <input type="checkbox" name="subscribtion" value="yes"> Subscribe me!<br>
+                                <input type="checkbox" name="subscription" value="yes"> Subscribe me!<br>
                              </div>
 
-                            <div class="form-group col-lg-12">
+                            <div class="form-group col-md-6 pull-left">
                               <input type="hidden" name="save" value="contact">
                               <button type="submit" class="btn btn-default">Submit</button>
                             </div>
@@ -204,6 +204,14 @@
               }).done(function(data) {
                 console.log("exiting post process...");
                 console.log(data);
+                if("success".localeCompare(data[0])){
+                    console.log("it worked!");
+                    $("#artForm").after("<p class='bg-success'>Art Sent Successfully</p>");
+                }
+                else {
+                    console.log("it didn't work!" + String(data[1]));
+                    $("#artForm").after("<p class='bg-fail'>Art Was not sent");
+                }
             });
         });
     </script>
