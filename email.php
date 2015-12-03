@@ -5,12 +5,12 @@
   //PHPMailer Object
   $mail = new PHPMailer;
 
-  //From email address and name
-  $mail->From = "from@yourdomain.com";
+  //The artist's email address and name
+  $mail->From = $_POST["emailAddress"];
   $mail->FromName = $_POST["name"];
 
   //To address and name
-  $mail->addAddress($_POST["emailAddress"], $_POST["fullName"]); //Pam's email
+  $mail->addAddress("peizadkh@emich.edu", $_POST["fullName"]); //Pam's email
 
   //Address to which recipient will reply
   $mail->addReplyTo("reply@yourdomain.com", "Reply"); //Pam's email
