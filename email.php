@@ -24,7 +24,7 @@
   $mail->isHTML(true);
 
   $mail->Subject = "Art Request";
-  $mail->Body = $_POST["message"] . " Subscibtion? " . $check ;
+  $mail->Body = $_POST["message"] . " subscription? " . $check ;
   $mail->AltBody = "This is the plain text version of the email content";
   $numAttachments = 0;
 
