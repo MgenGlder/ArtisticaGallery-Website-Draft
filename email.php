@@ -8,6 +8,7 @@
   //The artist's email address and name
   $mail->From = $_POST["emailAddress"];
   $mail->FromName = $_POST["name"];
+  $check = $_POST["subscription"];
 
   //To address and name
   $mail->addAddress("peizadkh@emich.edu", $_POST["fullName"]); //Pam's email
@@ -23,7 +24,7 @@
   $mail->isHTML(true);
 
   $mail->Subject = "Art Request";
-  $mail->Body = "message";
+  $mail->Body = $_POST["message"] . " Subscibtion? " . $check ;
   $mail->AltBody = "This is the plain text version of the email content";
   $numAttachments = 0;
 
