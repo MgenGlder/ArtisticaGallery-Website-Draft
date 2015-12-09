@@ -1,4 +1,4 @@
-app
+angular.module("app")
   .controller("MainController", ["$scope", "uiCalendarConfig", "$timeout", "$compile", function($scope, uiCalendarConfig, $timeout, $compile) {
 
     //get current date in variables
@@ -10,9 +10,11 @@ app
     console.log("This is the newest version");
     $scope.test = "hello";
     $scope.eventSource = {
-      googleCalendarId: "lk2ft9bah38bgde86rdn4ni8lk@group.calendar.google.com",
+      googleCalendarId: "artisticagallery3203@gmail.com",
+      
       googleCalendarApiKey: "AIzaSyDXkhOqrclsjGDNElsA-joExWX0TfBUiSM",
     };
+    //googleCalendarId: "lk2ft9bah38bgde86rdn4ni8lk@group.calendar.google.com"
     console.log("Got past the newest version");
     $scope.addRemoveEventSource = function(sources, source) {
       //does both adding and removing

@@ -1,0 +1,72 @@
+
+ <div class="row" ng-controller="hoursController" id="aboutPartial">
+      <div class="box">
+        <div class="col-lg-12">
+          <hr>
+          <h2 class="intro-text text-center">
+            <strong>About Artistica Gallery</strong>
+          </h2>
+          <hr>
+        </div>
+        <div class="col-md-6">
+          <img class="img-responsive img-border-left" src="http://s3-media2.fl.yelpcdn.com/bphoto/cqx2bgNDGrfQ_CPR0lh51g/ls.jpg" alt="" height="400" width="550">
+        </div>
+        <div class="col-md-6">
+          <p>At Artistica Gallery we strive to bring our customers nothing but the <i>finest</i> art that Michigan has to offer.</p>
+          <p>Artistica Gallery is a unique shop featuring art and fine gifts created by local and regional artists. Think of us when you are searching for that special gift for any occation or maybe just something special for yourself. Look for the red door
+            by the village clock in charming downtown Dexter.</p>
+          <strong>Normal Business Hours</strong>
+          <p>
+            <div ng-repeat="(day, times) in hours">
+              <b>{{day}}</b>: {{times.open}} - {{times.close}}
+            </div>
+            
+            </p>
+            <br/>
+            <p>
+              <small> Check our announcements for special hours </small>
+            </p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="box">
+        <div class="col-lg-12">
+          <hr>
+          <h2 class="intro-text text-center">
+            <strong>Our Team</strong>
+          </h2>
+          <hr>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a ng-click="tabLocation('partner1', $event)">
+            <img class="" src="img/Pam.jpg" alt="" height="200" width="200">
+          </a>
+          <h3>Pam O'hara
+            <br>
+            <small>Partner</small>
+          </h3>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a ng-click="tabLocation('partner2', $event)">
+            <img class="" src="img/SusansPic.jpg" alt="" height="200" width="200">
+          </a>
+          <h3>Susan Davis
+            <br>
+            <small>Partner</small>
+          </h3>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a ng-click="tabLocation('partner3', $event)">
+            <img class="" src="img/WandasPic.jpg" alt="" height="200" width="200">
+          </a>
+          <h3>Wanda Nicholson
+            <br>
+            <small>Partner</small>
+          </h3>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>

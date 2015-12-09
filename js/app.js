@@ -1,4 +1,5 @@
 angular.module("app").controller("hoursController", ["$scope", function($scope) {
+  console.log("in hours controller");
   var tenToFour = {
     "open": "10:00 am",
     "close": "4:00 pm"
