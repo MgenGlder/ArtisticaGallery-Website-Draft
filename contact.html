@@ -115,6 +115,9 @@
                             <br>Dexter, MI 48130</strong>
                     </p>
                     <div class="fb-like" data-href="https://www.facebook.com/artisticagallerydexter?fref=nf" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                    <a data-pin-do="buttonFollow" href="https://www.pinterest.com/artisticagaller/">Artistica&nbsp;Gallery</a>
+                    <!-- Please call pinit.js only once per page -->
+                    <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -128,13 +131,9 @@
                         <strong>Contact form</strong>
                     </h2>
                     <hr>
-                    <p>Give us your art!</p>
-                    <form role="form" action="email.php" method="post" enctype="multipart/form-data">
+                    <p>Contact us with pictures of your art below. You may attach up to 5 pictures (optional).</p>
+                    <form id="artForm" role="form" action="email.php" method="post" enctype="multipart/form-data">
                         <div class="row">
-                            <div class="form-group col-lg-4">
-                                <label>Subject</label>
-                                <input type="text" class="form-control" name = "subject">
-                            </div>
                             <div class="form-group col-lg-4">
                                 <label>Email Address</label>
                                 <input type="email" class="form-control" name="emailAddress">
@@ -148,19 +147,19 @@
                                 <label>Message</label>
                                 <textarea class="form-control" rows="6" name="message"></textarea>
                             </div>
-                            <div class="form-group col-lg-12">
-                                <label>Pictures of Art (Optional)</label>
-                                <input type="file" name="picture" id="picture" accept="image/*" />
-                                <input type="file" name="picture1" id="picture" accept="image/*" />
-                                <input type="file" name="picture2" id="picture" accept="image/*" />
-                                <input type="file" name="picture3" id="picture" accept="image/*" />
-                                <input type="file" name="picture4" id="picture" accept="image/*" />
-                              </br>
-                                <label>Artistica has a newsletter!</label></br>
-                                <input type="checkbox" name="subscribtion" value="yes"> Subscribe me!<br>
-                             </div>
+                            <label>Pictures of Art (Optional)</label>
+                            <div><input type="file" name="picture" id="picture" accept="image/*" /></div>
+                            <div><input type="file" name="picture1" id="picture" accept="image/*" /></div>
+                            <div><input type="file" name="picture2" id="picture" accept="image/*" /></div>
+                            <div><input type="file" name="picture3" id="picture" accept="image/*" /></div>
+                            <div><input type="file" name="picture4" id="picture" accept="image/*" /></div>
+                          </br>
+                            <div><label>Artistica has a newsletter!</label></div>
 
-                            <div class="form-group col-lg-12">
+                            <div class="form-group col-md-6 pull-left">
+
+                              <div>  <input type="checkbox" name="subscription" value="yes"> Subscribe me!</div>
+                              <br>
                               <input type="hidden" name="save" value="contact">
                               <button type="submit" class="btn btn-default">Submit</button>
                             </div>
@@ -174,6 +173,12 @@
     <!-- /.container -->
 
     <footer>
+      <div class="col-md-4">
+        <div class="fb-like" data-href="https://www.facebook.com/artisticagallerydexter?fref=nf" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+        <a data-pin-do="buttonFollow" href="https://www.pinterest.com/artisticagaller/">Artistica&nbsp;Gallery</a>
+      <!-- Please call pinit.js only once per page -->
+        <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+      </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -183,11 +188,43 @@
         </div>
     </footer>
 
+
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery.js">
+    </script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script> var x  = document.getElementById('check').checked; </script>
+
+    <script>
+        $("#artForm").on("submit", function (e){
+            e.preventDefault();
+            console.log("submitting the post request to the server");
+            var $fd = $(this).serialize();
+            console.log($fd);
+              $.ajax({
+                url: "email.php",
+                type: "POST",
+                data: $fd,
+                enctype: 'multipart/form-data',
+                processData: false,  // tell jQuery not to process the data
+                contentType: false   // tell jQuery not to set contentType
+              }).done(function(data) {
+                console.log("exiting post process...");
+                console.log(data);
+                if("success".localeCompare(data[0])){
+                    console.log("it worked!");
+                    $("#artForm").after("<p class='bg-success'>Art Sent Successfully</p>");
+                }
+                else {
+                    console.log("it didn't work!" + String(data[1]));
+                    $("#artForm").after("<p class='bg-fail'>Art Was not sent");
+                }
+            });
+        });
+    </script>
 
 </body>
 
