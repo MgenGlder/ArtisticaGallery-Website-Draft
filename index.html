@@ -18,6 +18,7 @@
 
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css" />
   <link rel="stylesheet" href="/bower_components/fullcalendar/dist/fullcalendar.css">
   <script src="/bower_components/angular/angular.js"></script>
   <script src="/bower_components/angular-route/angular-route.js"></script>
@@ -26,12 +27,12 @@
   <script src="/bower_components/fullcalendar/dist/fullcalendar.js"></script>
   <script src="/bower_components/fullcalendar/dist/gcal.js"></script>
   <script src="/bower_components/angular-ui-calendar/src/calendar.js"></script>
+  <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
   <script src="app.js"></script>
   <script src="js/app.js"></script>
   <script src="controller.js"></script>
   <script src="/js/rootController.js"></script>
   <!-- Bootstrap Core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link href="css/business-casual.css" rel="stylesheet">
@@ -57,15 +58,15 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-  <div class="brand"><p style="font-family:Zapf Chancery, cursive">Artistica Gallery <img class="logo" src="img/ArtisticaLogo.jpg" alt=""> </img> </p></div>
-    <div class="address-bar"><p>3203 Broadway Street | Dexter, MI 48130 | 734-426-1500</p></div>
+  <div class="brand"><p style="font-family:Zapf Chancery, cursive">Artistica Gallery <img class="logo img-circle" src="img/ArtisticaLogo.jpg" alt=""> </img> </p></div>
+    <div class="address-bar"><p><strong>3203 Broad Street | Dexter, MI 48130 | 734-426-1500</strong></p></div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-            <img  align="left" width=70px; height=70px; src="img/ArtisticaLogo.jpg" alt=""> </img>
+            <img  align="left" width=70px; height=70px; src="img/ArtisticaLogo.jpg" class="img-circle" alt=""> </img>
 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -132,11 +133,11 @@
       interval: 5000 //changes the speed
     })
     //changed the background for presentation purposes.
-    var i = 1;
+    var i = 7;
     $("body").css("background", "url(./img/bg-" + i + ".jpg)");
     $("#changeBg").on("click", function() {
       i++;
-      if(i > 6){
+      if(i > 7){
         i = 1;
       }
       $(this).toggleClass("bg-success");

@@ -1,5 +1,6 @@
 angular.module("app").controller("hoursController", ["$scope", function($scope) {
   console.log("in hours controller");
+  $scope.keys = Object.keys;
   var tenToFour = {
     "open": "10:00 am",
     "close": "4:00 pm"
@@ -17,37 +18,36 @@ angular.module("app").controller("hoursController", ["$scope", function($scope) 
     "close": "4:00 pm"
   };
   console.log("in the controller at least");
-  var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-  var fallHours = {
-    "Sunday": "CLOSED",
-    "Monday": "CLOSED",
-    "Tuesday": tenToSix,
-    "Wednesday": tenToSix,
-    "Thursday": tenToSix,
-    "Friday": tenToSix,
-    "Saturday": tenToSix
-  };
+  var fallHours = [
+    {"Sunday": "CLOSED"},
+    {"Monday": "CLOSED"},
+    {"Tuesday": tenToSix},
+    {"Wednesday": tenToSix},
+    {"Thursday": tenToSix},
+    {"Friday": tenToSix},
+    {"Saturday": tenToSix}
+  ];
   var winterHours = fallHours;
 
-  var blackFridayHours = {
-    "Sunday": noonToFour,
-    "Monday": tenToSix,
-    "Tuesday": tenToSix,
-    "Wednesday": tenToSix,
-    "Thursday": tenToSix,
-    "Friday": tenToSix,
-    "Saturday": tenToFour
-  };
-  var summerHours = {
-    "Sunday": noonToFour,
-    "Monday": "CLOSED",
-    "Tuesday": tenToSix,
-    "Wednesday": tenToSix,
-    "Thursday": tenToSix,
-    "Friday": tenToSix,
-    "Saturday": tenToFour
-  };
+  var blackFridayHours = [
+    {"Sunday": noonToFour},
+    {"Monday": tenToSix},
+    {"Tuesday": tenToSix},
+    {"Wednesday": tenToSix},
+    {"Thursday": tenToSix},
+    {"Friday": tenToSix},
+    {"Saturday": tenToFour}
+  ];
+  var summerHours = [
+    {"Sunday": noonToFour},
+    {"Monday": "CLOSED"},
+    {"Tuesday": tenToSix},
+    {"Wednesday": tenToSix},
+    {"Thursday": tenToSix},
+    {"Friday": tenToSix},
+    {"Saturday": tenToFour}
+  ];
 
   var displayDate = function() {
     var date = new Date();

@@ -32,7 +32,7 @@ angular.module("app")
         sources.push(source);
       } /* If you didn't remove anything, add the source */
     };
-
+    
     /* add custom event*/
     $scope.addEvent = function() {
       $scope.events.push({
@@ -85,7 +85,28 @@ angular.module("app")
         //  dayClick: $scope.alertEventOnClick,
         //  eventDrop: $scope.alertOnDrop,
         //  eventResize: $scope.alertOnResize
+    //     eventRender: function (event, element) {
+    //     element.attr('href', 'javascript:void(0);');
+    //     element.click(function() {
+    //         $("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
+    //         $("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
+    //         $("#eventInfo").html(event.description);
+    //         $("#eventLink").attr('href', event.url);
+    //         $("#eventContent").dialog({ modal: true, title: event.title, width:350});
+    //     });
+    // }
+            eventClick:  function(event, jsEvent, view) {
+              jsEvent.preventDefault();
+            $('#modalTitle').html(event.title);
+            $('#modalBody').html(event.description);
+            $("#startTime").html(moment(event.start).format("MMM Do h:mm A"));
+            $("#endTime").html(moment(event.end).format("MMM Do h:mm A"));
+            $('#eventUrl').attr('href',event.url);
+            $('#fullCalModal').modal();
+        },
+
       },
+      
     }
 
     $scope.eventSources = [$scope.eventSource];
