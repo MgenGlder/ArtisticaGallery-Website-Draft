@@ -98,7 +98,12 @@ angular.module("app")
             eventClick:  function(event, jsEvent, view) {
               jsEvent.preventDefault();
             $('#modalTitle').html(event.title);
-            $('#modalBody').html(event.description);
+            if (event.description){
+              $("#modalBody").html(event.description);
+            }
+            else{
+              $('#modalBody').html(""); 
+            }
             $("#startTime").html(moment(event.start).format("MMM Do h:mm A"));
             $("#endTime").html(moment(event.end).format("MMM Do h:mm A"));
             $('#eventUrl').attr('href',event.url);
