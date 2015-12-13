@@ -16,12 +16,13 @@ angular.module("app")
 			return {
 				enter: function(element, done) {
 					element.css("display", "none");
-					element.fadeIn(500, done);
+					element.fadeIn(500, done)
 					return function() {
 						element.stop();
 					}
 				},
 				leave: function (element, done){
+					element.css("display", "none");
 					element.fadeOut(500, done)
 					return function (){
 						element.stop();
