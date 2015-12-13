@@ -11,7 +11,7 @@
   $check = $_POST["subscription"];
 
   //To address and name
-  $mail->addAddress("peizadkh@emich.edu", $_POST["fullName"]); //Pam's email
+  $mail->addAddress("info@artisticagallery.net", $_POST["fullName"]); //Pam's email
 
   //Address to which recipient will reply
   $mail->addReplyTo("reply@yourdomain.com", "Reply"); //Pam's email
