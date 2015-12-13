@@ -9,8 +9,11 @@ To demo this website
 * load the index.html file into your browser
 
 ## Bugs and Issues
+
 * None of value 
+
 ## Creator
+
 * David Miller - Creator of the Business Casual template
 * Pegah
 * Kunle
