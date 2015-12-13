@@ -1,4 +1,4 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Business Casual](http://startbootstrap.com/template-overviews/business-casual/)
+# [Artistica Gallery](http://artisticagallery.net/) - [Using Business Casual](http://startbootstrap.com/template-overviews/business-casual/)
 
 [ArtisticaGallery Website](http://artisticagallery.net) 
 
